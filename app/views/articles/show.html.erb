@@ -1,0 +1,19 @@
+<%= render "shared/navbar" %>
+<div class="container mt-3">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <article>
+          <h1><%= @article.title %>
+            <small>
+              <i class="fa fa-pencil"></i>
+              <i class="fa fa-trash-o"></i>
+            </small>
+          </h1>
+          <hr>
+          <p><%= @article.content %>.</p>
+        </article>
+      </div>
+    </div>
+</div>
+<%= link_to " back", articles_path, class:"fa-regular fa-circle-left link-underline link-underline-opacity-0 mx-3" %>
+<br><br>

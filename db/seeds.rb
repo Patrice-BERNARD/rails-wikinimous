@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts 'creation de 10 articles'
+
+10.times do
+  article = Article.new(
+    title: Faker::Superhero.name,
+    content: "#{Faker::Superhero.descriptor}, #{Faker::Superhero.power}"
+    )
+    article.save!
+  end
+
+  puts "Terminé !"
